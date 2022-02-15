@@ -16,7 +16,7 @@
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"html {\\r\\n  box-sizing: border-box;\\r\\n}\\r\\nbody {\\r\\n  background-color: rgb(216, 216, 216);\\r\\n}\\r\\n\\r\\np {\\r\\n margin: 0;\\r\\n}\\r\\n\\r\\ninput {\\r\\n  margin-left: 0;\\r\\n}\\r\\n\\r\\nbutton {\\r\\n  height: 40px;\\r\\n  border: none;\\r\\n}\\r\\n\\r\\n#container {\\r\\n  display: flex;\\r\\n  flex-direction: column;\\r\\n}\\r\\n\\r\\n.ToDolist {\\r\\n  display: flex;\\r\\n  flex-direction: column;\\r\\n  background-color: white;\\r\\n}\\r\\n\\r\\n.ToDolist > * {\\r\\n  height: 40px;\\r\\n  display: flex;\\r\\n  align-items: center;\\r\\n  border: 1px solid rgba(128, 128, 128, 0.226);\\r\\n  padding-left: 5px;\\r\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://webpack-project---to-do-list-/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"html {\\r\\n  box-sizing: border-box;\\r\\n}\\r\\nbody {\\r\\n  background-color: rgb(216, 216, 216);\\r\\n}\\r\\n\\r\\np {\\r\\n margin: 0;\\r\\n}\\r\\n\\r\\ninput {\\r\\n  margin-left: 0;\\r\\n}\\r\\n\\r\\nbutton {\\r\\n  height: 40px;\\r\\n  border: none;\\r\\n}\\r\\n\\r\\nimg {\\r\\n  max-height: 20px;\\r\\n}\\r\\n\\r\\ni {\\r\\n  justify-self: flex-end;\\r\\n}\\r\\n\\r\\n.input input {\\r\\n  border: none;\\r\\n  font-style: italic;\\r\\n}\\r\\n\\r\\n#container {\\r\\n  display: flex;\\r\\n  flex-direction: column;\\r\\n}\\r\\n\\r\\n.ToDolist {\\r\\n  display: flex;\\r\\n  flex-direction: column;\\r\\n  background-color: white;\\r\\n}\\r\\n\\r\\n.ToDolist > * {\\r\\n  height: 40px;\\r\\n  display: flex;\\r\\n  align-items: center;\\r\\n  border: 1px solid rgba(128, 128, 128, 0.226);\\r\\n  padding-left: 5px;\\r\\n  justify-content: space-between;\\r\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://webpack-project---to-do-list-/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -136,7 +136,18 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\n\r\n\r\nconst list = document.body.querySelector('.ToDolist');\r\n\r\nconst tasks = [\r\n  {\r\n    index: 2,\r\n    description: \"some task\",\r\n    completed: true\r\n  },{\r\n    index: 1,\r\n    description: \"some task 2\",\r\n    completed: false\r\n  }\r\n];\r\n\r\nfor (let i = 1 ; i <= tasks.length ; i++ ) {\r\n  let li = document.createElement('div')\r\n  li.classList.add('li');\r\n  let taskToAdd = {};\r\n  tasks.forEach( task => {\r\n    if(task.index === i){\r\n      taskToAdd = task;\r\n    }\r\n  } )\r\n  li.innerHTML = `\r\n    <input type=\"checkbox\" id=\"${taskToAdd.index}\" name=\"${taskToAdd.index}\" checked=\"${taskToAdd.completed}\" >\r\n    <label for=\"${taskToAdd.index}\"> ${taskToAdd.description}</label>\r\n    <i><img src=\"./images/more.png\" alt=\"more.png\"></i>\r\n  `\r\n  list.appendChild(li);\r\n}\r\n\r\n\r\n\n\n//# sourceURL=webpack://webpack-project---to-do-list-/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _images_more_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images/more.png */ \"./src/images/more.png\");\n\r\n\r\n\r\n\r\nconst list = document.body.querySelector('.ToDolist');\r\n\r\nconst tasks = [\r\n  {\r\n    index: 1,\r\n    description: \"some task\",\r\n    completed: \"true\"\r\n  },{\r\n    index: 2,\r\n    description: \"some task 2\",\r\n    completed: \"false\"\r\n  },{\r\n    index: 3,\r\n    description: \"some task 3\",\r\n    completed: \"false\"\r\n  },{\r\n    index: 4,\r\n    description: \"some task 4\",\r\n    completed: \"false\"\r\n  }\r\n];\r\n\r\nfor (let i = 1 ; i <= tasks.length ; i++ ) {\r\n  let li = document.createElement('div');\r\n  li.classList.add('li');\r\n  let taskToAdd = {};\r\n  tasks.forEach( task => {\r\n    if(task.index === i){\r\n      taskToAdd = task;\r\n    }\r\n  } )\r\n  li.innerHTML = `\r\n    <span>\r\n    <input type=\"checkbox\" id=\"${taskToAdd.index}\" name=\"${taskToAdd.index}\" checked=\"${taskToAdd.completed}\" >\r\n    <label for=\"${taskToAdd.index}\"> ${taskToAdd.description}</label>\r\n    </span>\r\n  `\r\n  list.appendChild(li);\r\n}\r\n\r\nconst htmlTasks = document.getElementsByClassName('li');\r\n\r\n\r\nfor (const task of htmlTasks) {\r\n  let icon = document.createElement('i');\r\n  const image = new Image();\r\n  image.src = _images_more_png__WEBPACK_IMPORTED_MODULE_2__;\r\n  icon.appendChild(image);\r\n  task.appendChild(icon);\r\n  console.log(task);\r\n} \n\n//# sourceURL=webpack://webpack-project---to-do-list-/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/images/more.png":
+/*!*****************************!*\
+  !*** ./src/images/more.png ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7913a29f463cc7c378dd.png\";\n\n//# sourceURL=webpack://webpack-project---to-do-list-/./src/images/more.png?");
 
 /***/ })
 
@@ -229,6 +240,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var loda
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
