@@ -1,7 +1,15 @@
-* {
-  color: red;
+html {
+  box-sizing: border-box;
+}
+body {
+  background-color: bisque;
 }
 
-body {
-    background-color: bisque;
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+#container > * > * {
+  width: 100%;
 }
