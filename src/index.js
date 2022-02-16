@@ -1,7 +1,7 @@
 import './style.css';
 import more from './images/more.png';
 import {
-  addTask, removeTask, editTaskDescription, updateIndexes,
+  addTask, removeTasks, editTaskDescription, updateIndexes,
 } from './Add&Delete.js';
 
 const list = document.body.querySelector('.ToDolist');
@@ -10,7 +10,7 @@ let tasks = [];
 if (tasks !== []) { addTask(tasks); }
 const button = document.querySelector('button');
 button.addEventListener('click', () => {
-  removeTask(tasks); console.log(tasks);
+  removeTasks(tasks); console.log(tasks);
   updateIndexes(tasks);
 });
 
@@ -53,7 +53,7 @@ function populateHTML(tasks) {
 }
 
 window.addEventListener('load', () => {
-console.log(window.localStorage.getItem('tasks'));
+  console.log(window.localStorage.getItem('tasks'));
   if (window.localStorage.getItem('tasks') !== null) {
     tasks = JSON.parse(window.localStorage.getItem('tasks'));
     populateHTML(tasks);

@@ -27,11 +27,9 @@ export function addTask(tasks) {
     };
     tasks.push(inputTaskObj);
     if (tasks[0].description !== '') { window.localStorage.setItem('tasks', JSON.stringify(tasks)); }
-  } 
+  }
 
-  
   inputTask.value = null;
-  
 }
 
 export function removeTasks(tasks) {
@@ -43,7 +41,7 @@ export function removeTasks(tasks) {
 
 export function removeTask(tasks) {
   function completed(object) { return object.completed === false; }
-  tasks = tasks.filter(completed);
+  tasks.filter(completed);
 }
 
 export function editTaskDescription(htmlTask, taskObj, tasks) {
