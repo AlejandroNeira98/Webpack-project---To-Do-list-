@@ -23,30 +23,34 @@ const tasks = [
   },
 ];
 
-for (let i = 1; i <= tasks.length; i += 1) {
-  const li = document.createElement('div');
-  li.classList.add('li');
-  let taskToAdd = {};
-  tasks.forEach((task) => {
-    if (task.index === i) {
-      taskToAdd = task;
-    }
-  });
-  li.innerHTML = `
-    <span>
-    <input type="checkbox" id="${taskToAdd.index}" name="${taskToAdd.index}" checked="${taskToAdd.completed}" >
-    <label for="${taskToAdd.index}"> ${taskToAdd.description}</label>
-    </span>
-  `;
-  list.appendChild(li);
+function pupulateHTML() {
+  for (let i = 1; i <= tasks.length; i += 1) {
+    const li = document.createElement('div');
+    li.classList.add('li');
+    let taskToAdd = {};
+    tasks.forEach((task) => {
+      if (task.index === i) {
+        taskToAdd = task;
+      }
+    });
+    li.innerHTML = `
+      <span>
+      <input type="checkbox" id="${taskToAdd.index}" name="${taskToAdd.index}" checked="${taskToAdd.completed}" >
+      <label for="${taskToAdd.index}"> ${taskToAdd.description}</label>
+      </span>
+    `;
+    list.appendChild(li);
+  }
+
+  const htmlTasks = document.getElementsByClassName('li');
+
+  for (let i = 0; i < htmlTasks.length; i += 1) {
+    const icon = document.createElement('i');
+    const image = new Image();
+    image.src = more;
+    icon.appendChild(image);
+    htmlTasks[i].appendChild(icon);
+  }
 }
 
-const htmlTasks = document.getElementsByClassName('li');
-
-for (let i = 0; i < htmlTasks.length; i += 1) {
-  const icon = document.createElement('i');
-  const image = new Image();
-  image.src = more;
-  icon.appendChild(image);
-  htmlTasks[i].appendChild(icon);
-}
+window.addEventListener('load', pupulateHTML());
