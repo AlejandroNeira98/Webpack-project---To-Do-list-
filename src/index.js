@@ -1,7 +1,7 @@
 import './style.css';
 import more from './images/more.png';
 import {
-  addTask, removeTasks, editTaskDescription, updateIndexes,
+  addTask, removeTasks, removeTask, editTaskDescription, updateIndexes,
 } from './Add&Delete.js';
 
 const list = document.body.querySelector('.ToDolist');
@@ -31,10 +31,12 @@ function populateHTML(tasks) {
       <span class="task">
       <input type="checkbox"  name="${taskToAdd.index}" >
       <input type="text" id="${taskToAdd.index}" value="${taskToAdd.description}">
+      <button type="button" id="${taskToAdd.index}button"> remove </button>
       </span>
     `;
     list.appendChild(li);
-
+    const removebtn = document.getElementById(`${taskToAdd.index}button`);
+    removebtn.addEventListener('click', () => { li.remove(); removeTask(taskToAdd, tasks); });
     const htmlTask = document.getElementById(`${taskToAdd.index}`);
     htmlTask.addEventListener('keypress', () => {
       editTaskDescription(htmlTask, taskToAdd, tasks);

@@ -1,3 +1,15 @@
+export function updateLocalStorageFromHTML(tasks) {
+  const newTasks = [];
+  document.querySelectorAll('.task').forEach((HTMLtask) => {
+    const i = 0;
+    newTasks.description = HTMLtask.querySelector('[type="text"]').value;
+    newTasks.index = i;
+    newTasks.completed = HTMLtask.querySelector('[type="checkbox"]').checked;
+  });
+  tasks = newTasks;
+  window.localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
 export function updateIndexes(tasks) {
   const tasksOrdered = [];
   for (let i = 1; i <= tasks.length; i += 1) {
@@ -37,11 +49,15 @@ export function removeTasks(tasks) {
   tasks = tasks.filter(completed);
   /* update indexes */
   updateIndexes(tasks);
+  window.localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-export function removeTask(tasks) {
-  function completed(object) { return object.completed === false; }
-  tasks.filter(completed);
+export function removeTask(task, tasks) {
+  function is(object) { return object === task; }
+  console.log(tasks);
+  tasks.filter(is);
+  console.log(tasks);
+  updateLocalStorageFromHTML(tasks);
 }
 
 export function editTaskDescription(htmlTask, taskObj, tasks) {
