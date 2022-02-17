@@ -1,18 +1,14 @@
 import './style.css';
 import more from './images/more.png';
 import {
-  addTask, removeTasks, removeTask, editTaskDescription, updateIndexes,
+  addTask, removeTask, editTaskDescription, updateIndexes,
 } from './Add&Delete.js';
+import {
+  ChangeCheck, removeTasks,
+} from './ClearChecked.js';
 
 const list = document.body.querySelector('.ToDolist');
-
-let tasks = [];
-if (tasks !== []) { addTask(tasks); }
-const button = document.querySelector('button');
-button.addEventListener('click', () => {
-  removeTasks(tasks); console.log(tasks);
-  updateIndexes(tasks);
-});
+const tasks = [];
 
 function populateHTML(tasks) {
   const lis = document.querySelectorAll('.li');
@@ -27,20 +23,32 @@ function populateHTML(tasks) {
         taskToAdd = task;
       }
     });
-    li.innerHTML = `
+    if (taskToAdd.completed === true) {
+      li.innerHTML = `
+      <span class="task">
+      <input type="checkbox"  name="${taskToAdd.index}" checked >
+      <input type="text" id="${taskToAdd.index}" value="${taskToAdd.description}">
+      <button type="button" id="${taskToAdd.index}button"> remove </button>
+      </span>
+    `;
+    } else {
+      li.innerHTML = `
       <span class="task">
       <input type="checkbox"  name="${taskToAdd.index}" >
       <input type="text" id="${taskToAdd.index}" value="${taskToAdd.description}">
       <button type="button" id="${taskToAdd.index}button"> remove </button>
       </span>
     `;
+    }
     list.appendChild(li);
     const removebtn = document.getElementById(`${taskToAdd.index}button`);
-    removebtn.addEventListener('click', () => { li.remove(); removeTask(taskToAdd, tasks); });
+    removebtn.addEventListener('click', () => { li.remove(); removeTask(tasks); });
     const htmlTask = document.getElementById(`${taskToAdd.index}`);
     htmlTask.addEventListener('keypress', () => {
       editTaskDescription(htmlTask, taskToAdd, tasks);
     });
+    const checkbox = document.querySelector(`[name="${taskToAdd.index}"]`);
+    checkbox.addEventListener('click', () => { ChangeCheck(taskToAdd); window.localStorage.setItem('tasks', JSON.stringify(tasks)); });
   }
 
   const htmlTasks = document.getElementsByClassName('li');
@@ -55,11 +63,16 @@ function populateHTML(tasks) {
 }
 
 window.addEventListener('load', () => {
-  console.log(window.localStorage.getItem('tasks'));
-  if (window.localStorage.getItem('tasks') !== null) {
-    tasks = JSON.parse(window.localStorage.getItem('tasks'));
-    populateHTML(tasks);
+  if (window.localStorage.getItem('tasks') !== null && JSON.parse(window.localStorage.getItem('tasks')) !== []) {
+    /* updateIndexes(JSON.parse(window.localStorage.getItem('tasks')));
+    populateHTML(JSON.parse(window.localStorage.getItem('tasks'))); */
   }
+});
+
+const button = document.querySelector('#clear');
+button.addEventListener('click', () => {
+  /* removeTasks(tasks); */
+  populateHTML(tasks);
 });
 
 const inputTask = document.getElementById('addTask');
