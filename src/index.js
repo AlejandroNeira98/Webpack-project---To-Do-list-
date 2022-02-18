@@ -8,7 +8,11 @@ import {
 } from './ClearChecked.js';
 
 const list = document.body.querySelector('.ToDolist');
-const tasks = [];
+let tasks = [];
+
+function updateTasksArray() {
+  tasks = JSON.parse(window.localStorage.getItem('tasks'));
+}
 
 function populateHTML(tasks) {
   const lis = document.querySelectorAll('.li');
@@ -41,14 +45,21 @@ function populateHTML(tasks) {
     `;
     }
     list.appendChild(li);
+
     const removebtn = document.getElementById(`${taskToAdd.index}button`);
-    removebtn.addEventListener('click', () => { li.remove(); removeTask(tasks); });
+    removebtn.addEventListener('click', () => { li.remove(); removeTask(tasks); updateTasksArray(); });
+
     const htmlTask = document.getElementById(`${taskToAdd.index}`);
     htmlTask.addEventListener('keypress', () => {
       editTaskDescription(htmlTask, taskToAdd, tasks);
     });
+
     const checkbox = document.querySelector(`[name="${taskToAdd.index}"]`);
-    checkbox.addEventListener('click', () => { ChangeCheck(taskToAdd); window.localStorage.setItem('tasks', JSON.stringify(tasks)); });
+    checkbox.addEventListener('click', () => {
+      updateTasksArray();
+      ChangeCheck(taskToAdd);
+      window.localStorage.setItem('tasks', JSON.stringify(tasks));
+    });
   }
 
   const htmlTasks = document.getElementsByClassName('li');
@@ -64,15 +75,17 @@ function populateHTML(tasks) {
 
 window.addEventListener('load', () => {
   if (window.localStorage.getItem('tasks') !== null && JSON.parse(window.localStorage.getItem('tasks')) !== []) {
-    /* updateIndexes(JSON.parse(window.localStorage.getItem('tasks')));
-    populateHTML(JSON.parse(window.localStorage.getItem('tasks'))); */
+    updateIndexes(JSON.parse(window.localStorage.getItem('tasks')));
+    tasks = JSON.parse(window.localStorage.getItem('tasks'));
+    populateHTML(JSON.parse(window.localStorage.getItem('tasks')));
   }
 });
 
 const button = document.querySelector('#clear');
-button.addEventListener('click', () => {
-  /* removeTasks(tasks); */
-  populateHTML(tasks);
+button.addEventListener('click', (e) => {
+  e.preventDefault();
+  removeTasks(JSON.parse(window.localStorage.getItem('tasks')));
+  populateHTML(JSON.parse(window.localStorage.getItem('tasks')));
 });
 
 const inputTask = document.getElementById('addTask');

@@ -14,8 +14,12 @@ export function updateLocalStorageFromHTML(tasks) {
 }
 
 export function updateIndexes(tasks) {
-  const tasksOrdered = [];
- 
+  tasks.forEach((task) => {
+    task.index = tasks.indexOf(task) + 1;
+  });
+  window.localStorage.setItem('tasks', JSON.stringify(tasks));
+  /*  const tasksOrdered = [];
+
   for (let i = 1; i <= tasks.length; i += 1) {
     let position = 0;
     let min = tasks[0];
@@ -33,7 +37,7 @@ export function updateIndexes(tasks) {
   tasks = tasksOrdered;
   if (tasksOrdered !== []) {
     window.localStorage.setItem('tasks', JSON.stringify(tasks));
-  }
+  } */
 }
 
 export function addTask(tasks) {
@@ -53,7 +57,6 @@ export function addTask(tasks) {
 
 export function removeTask(tasks) {
   updateLocalStorageFromHTML(tasks);
-  tasks = JSON.parse(window.localStorage.getItem('tasks'));
 }
 
 export function editTaskDescription(htmlTask, taskObj, tasks) {
