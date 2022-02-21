@@ -11,7 +11,7 @@ To Do list project whit Webpack
 
 ## Set up instructions:
 
-- # first of all you have to install node.js and webpack.
+-first of all you have to install node.js and webpack.
 
 -git clone https://github.com/AlejandroNeira98/Webpack-project---To-Do-list-.git
 
