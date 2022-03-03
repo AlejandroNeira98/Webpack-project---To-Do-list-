@@ -5,7 +5,7 @@ To Do list project whit Webpack
 
 - HTML
 - CSS
-- Javascript
+- JavaScript
  
 ![imagen](https://user-images.githubusercontent.com/93448210/148102496-ed20c529-bf6b-4eee-8b5c-1cf9f1cb4bdd.png)
 
